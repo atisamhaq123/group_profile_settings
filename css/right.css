@@ -29,7 +29,7 @@
 
 .group-profile_btn {
   height: 40px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 2px solid var(--primary);
   cursor: pointer;
 }
