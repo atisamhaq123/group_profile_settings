@@ -1,6 +1,6 @@
 $(document).ready(function($){
     function loadForm(tab) {
-        $('#group-profile-form-container').html('<p>Loading...</p>');
+        // $('#group-profile-form-container').html('<p>Loading...</p>');
 
         $.ajax({
             url: M.cfg.wwwroot + '/local/lat_groupprofilesettings/ajax.php',
