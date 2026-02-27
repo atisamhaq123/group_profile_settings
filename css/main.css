@@ -30,6 +30,15 @@
     font-weight: 600;
     
 }
+.heading_secondary {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.heading_tertiary {
+    font-size: 20px;
+    font-weight: 600;
+}
 
 .heading_medium {
     font-size: 18px;
@@ -53,6 +62,16 @@
     color: var(--muted);
     font-weight: 400;
     font-size: 14px;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+
+
+.font-700 {
+    font-weight: 700;
 }
 
 .font-600 {
@@ -146,7 +165,7 @@ fieldset, .form-group .felement, .form-group .custom-select, .form-group .form-c
     max-width: 100% !important;
     box-shadow: none;
 }
-.form_section .form-control, .form_section .custom-select {
+.form_section .form-control:not(textarea), .form_section .custom-select {
     height: 48px;
 }
 .lat-textarea .form-control, .form_section .form-control, .form_section .custom-select {
@@ -187,3 +206,41 @@ fieldset, .form-group .felement, .form-group .custom-select, .form-group .form-c
     max-width: 50% !important;
     margin: 0 !important;
 }
+
+/* checkbox */
+.checkboxes_section .checkbox .form-check
+    {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+.form-group label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #121117 !important;
+}
+.checkboxes_section .custom-control .ios-switch-control-input {
+    display: block !important;
+    margin-right: 8px;
+}
+.checkboxes_section .form-check-input {
+    accent-color: black;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+.checkboxes_section .custom-control.ios-switch .ios-switch-control-indicator {
+    display: none !important;
+}
+.checkboxes_section .custom-control.ios-switch span.text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #121117;
+    cursor: pointer;
+}
+.checkboxes_section .form-group.fitem {
+    margin-bottom: 16px !important;
+}
+/* checkbox */

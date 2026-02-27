@@ -24,3 +24,37 @@
 }
 
 /* photo */
+
+/* video */
+.lat-video-preview iframe,
+.video_thumbnail_img {
+    width: 100%;
+    height: auto;
+    min-height: 238px;
+}
+/* .video_thumbnail_img,
+.lat-video-preview iframe {
+    height: 238px;
+    width: 450px;
+} */
+
+.lat-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #CCE2FF;
+    border-radius: 2px;
+}
+
+.lat-callout-text {
+    font-size: 16px;
+    color: #121117;
+    line-height: 1.5;
+}
+
+.lat-callout svg {
+    min-width: 24px;
+}
+
+/* video */
