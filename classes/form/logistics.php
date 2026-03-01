@@ -12,11 +12,12 @@ class logistics extends moodleform
     {
         global $OUTPUT, $CFG;
         $mform = $this->_form;
+        $mform->addElement('html', '<div class="form_section">');
         $mform->addElement('html', '<h3 class="heading mb-24 mt-0">' . 'Logistics' . '</h3>');
         // Headings for columns
-        $mform->addElement('html', '<div class="row mb-2 mx-n1">
-        <h2 class="small_heading font-400 mb-0 col-lg-6 px-1">Main Teacher</h2>
-        <h2 class="small_heading font-400 mb-0 col-lg-6 px-1">Second Teacher</h2>
+        $mform->addElement('html', '<div class="row mb-2 mx-n2">
+        <h2 class="small_heading font-400 mb-0 col-lg-6 px-2">Main Teacher</h2>
+        <h2 class="small_heading font-400 mb-0 col-lg-6 px-2">Second Teacher</h2>
         </div>');
 
         // SPECIAL Dropdowns
@@ -76,7 +77,7 @@ class logistics extends moodleform
             $mform->addElement('html', '</div>');
         }
 
-        
+
         $mform->addElement('html', '<h3 class="heading_tertiary mb-2 mt-4 mt-0">' . 'Practical class schedule ' . '</h3>');
         $mform->addElement('html', '<div class="main_class_div row mx-0">');
         $mform->addElement('html', '<div class="col-lg-4 px-2 d-flex align-items-center"></div>');
@@ -121,7 +122,20 @@ class logistics extends moodleform
             $mform->addElement('html', '</div>');
         }
 
+         $mform->addElement('html', '<div class="row mx-n3 mt-3 mb-5">');
+         $mform->addElement('html', '<div class="col-lg-6 px-3">');
+         $mform->addElement('html', '<label for="start_date" class="small_heading font-400 mb-1">Start Date</label>');
+         $mform->addElement('html', '<input type="date" id="start_date" name="schedule_date" class="form-control shadow-none">');
+         $mform->addElement('html', '</div>');
 
+         $mform->addElement('html', '<div class="col-lg-6 px-3">');
+         $mform->addElement('html', '<label for="end_date" class="small_heading font-400 mb-1">End Date</label>');
+         $mform->addElement('html', '<input type="date" id="end_date" name="schedule_date" class="form-control shadow-none">');
+         $mform->addElement('html', '</div>');
+
+         $mform->addElement('html', '</div>');
+
+        $mform->addElement('html', '</div>');
 
         // save
         $this->add_action_buttons(false, get_string('save'));
