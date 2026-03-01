@@ -64,6 +64,12 @@
     font-size: 14px;
 }
 
+.log_text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666666;
+}
+
 .font-14 {
     font-size: 14px !important;
 }
@@ -143,6 +149,9 @@ button:focus {
     max-width: 1280px;
 }
 
+.close_gaps .form-group {
+    margin-bottom: 12px !important;
+}
 .form-group {
     display: block !important;
     margin-bottom: 24px !important;
