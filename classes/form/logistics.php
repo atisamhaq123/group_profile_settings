@@ -6,9 +6,12 @@ require_once($CFG->libdir.'/formslib.php');
 
 use moodleform;
 
-class background extends moodleform {
+class logistics extends moodleform {
     public function definition() {
         $mform = $this->_form;
-        $mform->addElement('html', '<p>This is the background form</p>');
+        $mform->addElement('html', '<h3 class="heading mb-24 mt-0">' . 'Logistics' . '</h3>');
+
+          // save
+        $this->add_action_buttons(false, get_string('save'));
     }
 }
