@@ -82,4 +82,43 @@
             }
         }
     });
+    document.addEventListener("click", function (e) {
+        // Find closest tutor selector trigger clicked
+        const trigger = e.target.closest(".lat-group-selector-trigger");
+        if (trigger) {
+            const selector = trigger.closest(".lat-group-tutor-selector");
+            const panel = selector.querySelector(".lat-group-selector-panel");
+
+            const isOpen = selector.getAttribute("data-open") === "true";
+            selector.setAttribute("data-open", !isOpen);
+            panel.classList.toggle("hidden", isOpen);
+            trigger.setAttribute("aria-expanded", !isOpen);
+
+            e.stopPropagation(); // Prevent document click from closing immediately
+            return;
+        }
+
+        // Click outside any selector → close all
+        document.querySelectorAll(".lat-group-tutor-selector").forEach(selector => {
+            selector.setAttribute("data-open", "false");
+            const panel = selector.querySelector(".lat-group-selector-panel");
+            const trigger = selector.querySelector(".lat-group-selector-trigger");
+            panel.classList.add("hidden");
+            trigger.setAttribute("aria-expanded", "false");
+        });
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            document.querySelectorAll(".lat-group-tutor-selector").forEach(selector => {
+                selector.setAttribute("data-open", "false");
+                const panel = selector.querySelector(".lat-group-selector-panel");
+                const trigger = selector.querySelector(".lat-group-selector-trigger");
+                panel.classList.add("hidden");
+                trigger.setAttribute("aria-expanded", "false");
+            });
+        }
+    });
+
 })();
