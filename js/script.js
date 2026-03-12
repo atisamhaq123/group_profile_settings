@@ -121,4 +121,55 @@
         }
     });
 
+     function placeCaretAtEnd(el) {
+        el.focus();
+        if (typeof window.getSelection != "undefined"
+            && typeof document.createRange != "undefined") {
+            let range = document.createRange();
+            range.selectNodeContents(el);
+            range.collapse(false); // move caret to end
+            let sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+    }
+    $('.group-edit-btn').click(function () {
+
+        let row = $(this).closest('.group-info-row');
+        let text = row.find('.short_muted_text');
+
+        let editIcon = $(this).find('.edit-icon');
+        let saveIcon = $(this).find('.save-icon');
+
+        if (!text.attr('contenteditable')) {
+
+            // Enable editing
+            text.attr('contenteditable', 'true');
+            placeCaretAtEnd(text[0]);
+
+            // Change button background
+            text.css('color', '#121117');
+            $(this).css('background-color', 'red');
+
+            editIcon.addClass('d-none');
+            saveIcon.removeClass('d-none');
+
+        } else {
+
+            // Save mode
+            text.removeAttr('contenteditable');
+
+            // Reset button background
+            $(this).css('background-color', 'white');
+            text.css('color', '#6b7280');
+
+            editIcon.removeClass('d-none');
+            saveIcon.addClass('d-none');
+
+            let updatedValue = text.text();
+
+        }
+
+    });
+
 })();
