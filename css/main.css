@@ -55,6 +55,7 @@
 .prime_heading {
     font-size: 16px;
     font-weight: 600;
+    color: #121117;
     
 }
 
@@ -89,7 +90,7 @@
 }
 
 .font-400 {
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 
@@ -216,6 +217,30 @@ fieldset, .form-group .felement, .form-group .custom-select, .form-group .form-c
     margin: 0 !important;
 }
 
+.super_heading {
+    font-weight: 600;
+    font-size: 26px;
+    color: #121117;
+}
+
+.short_text {
+  color: #121117;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.muted_box {
+    border: 2px solid #DCDCE5;
+    border-radius: 8px;
+    height: 48px;
+    background: #fff;
+    cursor: pointer;
+}
+
+button.muted_box:hover {
+    background: #F4F4F4;
+}
+
 /* checkbox */
 .checkboxes_section .checkbox .form-check
     {
@@ -253,3 +278,59 @@ fieldset, .form-group .felement, .form-group .custom-select, .form-group .form-c
     margin-bottom: 16px !important;
 }
 /* checkbox */
+
+
+ /* share-profile-popup */
+ .share-profile-popup {
+     font-family: "Poppins", sans-serif;
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 560px;
+    border: 1px solid #DCDCE5;
+    border-radius: 8px;
+    box-shadow: 0px 16px 48px 0px #12111726;
+    padding: 16px 35px;
+    background: #fff;
+    z-index: 5;
+}
+.share-profile-popup .close_box {
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;   
+}
+
+.share-profile-popup .close_box:hover {
+    background: #f4f4f4;
+}
+
+
+ .share-profile-popup .search_field {
+    border-radius: 8px;
+    border: 2px solid #DCDCE5;
+    padding: 12px 45px 12px 16px;
+    font-size: 16px;
+    color: #121117;
+    font-weight: 400;  
+ }
+ 
+ .share-profile-popup .input-wrapper {
+     position: relative;
+    }
+
+.share-profile-popup .link_btn svg {
+    margin-top: -4px;
+}
+
+.share-profile-popup .link_btn:hover {
+    color: #121117 !important;
+}
+
+.share-profile-popup .input-wrapper .copy-btn{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    cursor: pointer;
+}
+ /* share-profile-popup */
